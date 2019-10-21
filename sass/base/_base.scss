@@ -34,3 +34,8 @@ body {
         padding: 0; // remove the white padding all around
     }
 }
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
