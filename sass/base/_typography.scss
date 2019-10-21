@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: $color-gray;
-    padding: 3rem;
+    
 }
 
 /* Main Site Logo */
@@ -17,9 +17,21 @@ body {
     &--main {
         display: block;
         font-weight: 400;
+        
         font-size: 6rem;
         letter-spacing: 3.5rem;
-    
+        
+        @include respond(tab-port) {
+            font-size: 5rem !important;
+            letter-spacing: 2.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 4rem !important;
+            letter-spacing: 1rem;
+            font-weight: 300;
+        }
+
         animation-name: moveInFromLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
@@ -27,10 +39,22 @@ body {
     
     &--sub {
         display: block;
+
         font-weight: 700;
         font-size: 2rem;
         letter-spacing: 1.74rem;
     
+        @include respond(tab-port) {
+            font-size: 1.7rem !important;
+            letter-spacing: 1.2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.5rem !important;
+            letter-spacing: .5rem;
+            font-weight: 400;
+        }
+
         animation-name: moveInFromRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
@@ -42,6 +66,15 @@ body {
     font-weight: 700;
     font-size: 3.5rem;
     letter-spacing: .2rem;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+    
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     display: inline-block;
     background-clip: unset; // for compatibility

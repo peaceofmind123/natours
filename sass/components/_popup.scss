@@ -12,6 +12,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all .2s;
+
     
     &__content {
         border-radius: 3px;
@@ -28,11 +29,23 @@
         display: table;
 
         transition: all .2s .2s; // last one is delay
+
+        @include respond(tab-port) {
+            display: block;
+        }
+        
     }
 
     &__left {
         width: calc(100%/3);
         display: table-cell;
+        @include respond(tab-port) {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            @include clearfix;
+        }
     }
 
     &__right {
@@ -40,11 +53,30 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem;
+        
+
+        @include respond(tab-port) {
+            display: block;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
     }
 
     &__img {
         display: block;
         width: 100%;
+        
+        @include respond(tab-port) {
+            display: inline-block;
+            float: left;
+            width: 50%;
+            
+            &:first-child {
+                transform: scaleY(1.06);
+            }
+        }
     }
 
     &__text {
@@ -53,6 +85,7 @@
         column-count: 2;
         column-gap: 4rem;
         column-rule: 1px solid $color-gray-light-2;
+        hyphens: auto;
     }
 
     &__close {

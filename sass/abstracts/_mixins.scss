@@ -21,6 +21,8 @@
     tab-port: 56.25em
     tab-land: 75em
     big-desktop: 112.5em
+
+    ORDER of applying media queries: base, typography > layout (general) > pages (specific page layout) > components
 */
 
 @mixin respond($breakpoint) {

@@ -7,6 +7,16 @@
     padding-left: 9rem;
     box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
     transform: skewX(-12deg);
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 3rem 3rem 3rem 6rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0deg);
+    }
+
     &__figure {
         width: 15rem;
         height: 15rem;
@@ -15,6 +25,15 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);   
+        
+        @include respond(tab-port) {
+            transform: translateX(-3.5rem) skewX(12deg);
+        }
+
+        @include respond(phone) {
+            transform: translateX(-2rem) skewX(0deg);
+        }
+        
     }
 
     &__img {
@@ -22,10 +41,16 @@
         transform: translate(-20%,0);
         transition: all .2s;
         backface-visibility: hidden;
+        
     }
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0deg);
+        }
+        
     }
     &__caption {
         color: $color-white;
@@ -52,6 +77,11 @@
     }
     &__heading {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0deg);
+        }
     }
+
 
 }

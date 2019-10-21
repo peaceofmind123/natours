@@ -301,7 +301,12 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="imgs/logo-green-2x.png" alt="footer logo" class="footer__logo">
+            <!--Art direction with density switching-->
+            <picture class="footer__logo">
+                <source media="(max-width: 37.5em)" srcset="imgs/logo-green-small-2x.png 2x, imgs/logo-green-small-1x.png 1x">
+                    <img srcset="imgs/logo-green-2x.png 2x, imgs/logo-green-1x.png 1x" alt="footer logo">
+            </picture>
+            
         </div>
         <div class="row">
             <div class="col-1-of-2">

@@ -148,4 +148,62 @@
         font-size: 6rem;
         font-weight: 100;
     }
+
+    @include respond(tab-land) {
+        height: auto;
+
+        &:hover &__side--front {
+            transform: rotateY(0deg);
+        }
+        
+        background-color: $color-white;
+        &__side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            
+            
+            &--back {
+                transform: rotateY(0deg);
+                padding: 8rem 0 5rem 0;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);   
+            }
+        }
+    
+        &__details {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            ul {
+                list-style: none;
+                width: 80%;
+                margin: 0 auto;
+                li {
+                    padding: 1rem;
+                    border-bottom: 1px solid $color-gray-light-2;
+                    text-align: center;
+                }
+            }
+        }
+    
+        // BACK SIDE STYLES
+        &__cta {
+            text-align: center;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0,0);
+            
+
+            .btn {
+                margin-top: 1rem !important;
+            }
+        }
+
+        &__price-value {
+            font-size: 4rem;
+        }
+    }
 }

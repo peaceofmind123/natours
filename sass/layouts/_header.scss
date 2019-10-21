@@ -10,6 +10,9 @@
     url(../imgs/hero.jpg);
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
     
     &__logo-box {
         position: absolute;

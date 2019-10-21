@@ -1,16 +1,34 @@
 .row {
     max-width: $grid-max-width; // standard 1140px
+
+    @include respond(tab-port) {
+        max-width: 60rem; // bring the padding on left and right back
+        padding: 0 3rem;
+    }
     margin: 0 auto;
     
     @include clearfix;
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small; // for multi-row sections
+        }
     }
 
     [class^="col-"] {
         float: left;
+        
+        @include respond(tab-port) {
+            width: 100% !important; // transform cols into rows
+        }
+
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            
+            @include respond(tab-port) {
+                margin-right: 0; // since cols are now rows, no need or right margin
+                margin-bottom: $gutter-vertical-small; // too huge gutter, so reduce
+            }
         }
     }
 
