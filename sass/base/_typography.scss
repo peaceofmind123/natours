@@ -74,13 +74,17 @@ body {
     @include respond(phone) {
         font-size: 2.5rem;
     }
-    
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     display: inline-block;
-    background-clip: unset; // for compatibility
-    -webkit-background-clip: text; // available only in chrome
+    
+    @supports(-webkit-background-clip: text) {
+        background-clip: unset; // for compatibility
+        -webkit-background-clip: text; // available only in chrome
+        color: transparent;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    }
+    
 
-    color: transparent;
+    
     transition: all .2s;
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
