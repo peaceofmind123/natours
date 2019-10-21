@@ -7,13 +7,23 @@
         to right bottom,
     rgba($color-primary-light, 0.801),
     rgba($color-primary-dark, 0.801)),
-    url(../imgs/hero.jpg);
+    url(../imgs/hero-small.jpg);
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
     @include respond(phone) {
         clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
     }
     
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+            (min-width: 125em) {
+        background-image: linear-gradient(
+        to right bottom,
+    rgba($color-primary-light, 0.801),
+    rgba($color-primary-dark, 0.801)),
+    url(../imgs/hero.jpg);
+    }
+
     &__logo-box {
         position: absolute;
         top: 4rem;
