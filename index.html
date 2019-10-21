@@ -66,9 +66,28 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="imgs/nat-1-large.jpg" alt="Photo1" class="composition__photo composition__photo--1">
+
+                        <!--Resolution switching with density switching -->
+                        <!--sizes attr: approx width of img at different breakpoints the last one is at the default view-->
+                        <img
+                            alt="Photo1" 
+                            srcset="imgs/nat-1-large.jpg 1000w, imgs/nat-1.jpg 300w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"  
+                            class="composition__photo composition__photo--1">
+                        <img src="imgs/nat-2-large.jpg"
+                            alt="Photo2" 
+                            srcset="imgs/nat-2-large.jpg 1000w, imgs/nat-2.jpg 300w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"  
+                            class="composition__photo composition__photo--2">
+                        <img src="imgs/nat-3-large.jpg"
+                            alt="Photo3" 
+                            srcset="imgs/nat-3-large.jpg 1000w, imgs/nat-3.jpg 300w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"  
+                            class="composition__photo composition__photo--3">
+
+                        <!-- <img src="imgs/nat-1-large.jpg" alt="Photo1" class="composition__photo composition__photo--1">
                         <img src="imgs/nat-2-large.jpg" alt="Photo2" class="composition__photo composition__photo--2">
-                        <img src="imgs/nat-3-large.jpg" alt="Photo3" class="composition__photo composition__photo--3">
+                        <img src="imgs/nat-3-large.jpg" alt="Photo3" class="composition__photo composition__photo--3"> -->
                     </div>
                 </div>
             </div>
